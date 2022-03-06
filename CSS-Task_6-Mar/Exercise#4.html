@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Traffic light css</title>
+
+      <style>
+
+        #TrafficLight
+        {
+            width:100px;
+            height:250px;
+
+            background-color: black;
+
+            border-radius: 10px;
+            padding: 10px;
+          
+        }
+
+        /*We use span for the common properities in 3 circles*/
+        /*This is will be the original state for the span elements that will return to it at the end of the animation*/
+        span
+        {
+          width: 40px;
+          height: 40px;
+          border-radius: 50px;
+
+          background-color: grey;
+          display:block; /*Block display to create a new line after each span because the span is an inline display by default*/
+          margin:33px; /*Margin will add spaces between the circles.*/
+
+          animation-duration: 3.5s;
+          animation-iteration-count: infinite;          
+
+        }
+
+        #red {animation-name: steady;}
+        @keyframes steady 
+        {
+            0% , 33% {background-color: red;}
+            34% , 100% {background-color: grey;} 
+        }
+
+        #yellow {animation-name: ready;}
+        @keyframes ready 
+        {
+            0% , 33% {background-color: grey;}
+            34% , 66% {background-color: yellow;}
+            67% , 100% {background-color: grey;} 
+        }
+
+        #green {animation-name: go;}
+        @keyframes go 
+        {
+            0% , 66% {background-color: grey;}
+            67% , 100% {background-color: green;} 
+        }
+        
+      </style>
+  </head>
+
+
+
+
+  <body>
+    <div id="TrafficLight">
+      <span id="red"></span>
+      <span id="yellow"></span>
+      <span id="green"></span>
+    </div>
+  </body>
+</html>
