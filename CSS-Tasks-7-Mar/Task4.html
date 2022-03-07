@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.black { grid-area: blk; padding: 30px; }
+.orange { grid-area: org; padding: 150px; }
+.green { grid-area: grn; }
+.blue { grid-area: blu; padding: 60px;}
+
+
+#grid-container {
+
+  display: grid;
+
+  grid-template-areas:
+  'blk blk blk blk blk blk blk '
+  'org org org org grn grn grn'
+  'blu blu blu blu blu blu blu ';
+
+  grid-gap: 10px;
+
+
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<div id="grid-container">
+  <div class="black" style="background-color: black;"></div>
+  <div class="orange" style="background-color: orange;"></div>
+  <div class="green" style="background-color: green;"></div>  
+  <div class="blue" style="background-color: blue;"></div>
+
+</div>
+
+</body>
+</html>
