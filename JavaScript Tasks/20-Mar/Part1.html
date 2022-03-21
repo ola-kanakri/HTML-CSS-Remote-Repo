@@ -9,36 +9,36 @@
 <body>
     <script>
 
-let Input = Number(prompt("Please enter your mark:"));
+let Input = prompt("Please enter your mark:");
 
-switch(Input) {
+switch(true){
 
   case (Input>=90 && Input<=100):
-    console.log("A");
+    window.alert("A");
     break;
 
     case (Input>=80 && Input<=89):
-    console.log("B");
+    window.alert("B");
     break;
 
     case (Input>=70 && Input<=79):
-    console.log("C");
+    window.alert("C");
     break;
     
     case (Input>=60 && Input<=69):
-    console.log("D");
+    window.alert("D");
     break;
     
     case (Input>=50 && Input<=59):
-    console.log("F");
+    window.alert("F");
     break;
 
     case (Input>=0 && Input<=49):
-    console.log("Fall");
+    window.alert("Fall");
     break;
 
   default:
-  console.log("I have never heard of that mark!");
+  window.alert("I have never heard of that mark!");
 }
 
     </script>
