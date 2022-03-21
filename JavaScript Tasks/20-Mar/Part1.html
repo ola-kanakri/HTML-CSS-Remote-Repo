@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 1 </title>
+</head>
+<body>
+    <script>
+
+let Input = Number(prompt("Please enter your mark:"));
+
+switch(Input) {
+
+  case (Input>=90 && Input<=100):
+    console.log("A");
+    break;
+
+    case (Input>=80 && Input<=89):
+    console.log("B");
+    break;
+
+    case (Input>=70 && Input<=79):
+    console.log("C");
+    break;
+    
+    case (Input>=60 && Input<=69):
+    console.log("D");
+    break;
+    
+    case (Input>=50 && Input<=59):
+    console.log("F");
+    break;
+
+    case (Input>=0 && Input<=49):
+    console.log("Fall");
+    break;
+
+  default:
+  console.log("I have never heard of that mark!");
+}
+
+    </script>
+</body>
+</html>
