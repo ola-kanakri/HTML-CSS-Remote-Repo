@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #3</title>
+
+    <script>
+        function flag( imgId, newImg )//imgId = Our_img
+        {
+            document.getElementById(imgId).src="Images/" + newImg +".png";
+            document.getElementById(imgId).alt= newImg;
+        }
+    </script>
+</head>
+
+<body>
+
+    <label>Country</label>
+    <select id="country" onchange="flag('Our_Img', this.value )" >
+
+        <option value="Our_Img" selected disabled hidden>Select</option>
+        <option value="USA">USA</option>
+        <option value="Germany">Germany</option>
+        <option value="Spain">Spain</option>
+        <option value="Italy">Italy</option>
+    </select><br><br><br><br><br><br>
+
+    <img src="Images/Blank_img.png" id="Our_Img" style="width: 200px; height: 100px; border: solid 5px;">
+
+
+    
+</body>
+</html>

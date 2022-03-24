@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #4</title>
+
+    <style>
+        div
+        {
+            border: solid 2px;
+            width: 400px;
+            height: 150px;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+
+        function Font_Family(family_arg)
+        {document.getElementById("Content").style.fontFamily= family_arg;}
+
+        function Font_Size(size_arg)
+        {document.getElementById("Content").style.fontSize= size_arg;}
+
+        function Font_Italic()
+        {
+            var Text =  document.getElementById("Content");
+            var check_val = document.getElementById("Italic").checked;
+            Text.style.fontStyle= (check_val ? "italic" : "normal");
+        }
+
+        function Font_Bold()
+        {
+            var Text = document.getElementById("Content");
+            var check_val = document.getElementById("Bold").checked;
+            Text.style.fontWeight = (check_val ? "bold" : "normal");
+        }
+
+        function Font_Underline() 
+        {
+            var Text = document.getElementById("Content");
+            var check_val = document.getElementById("Underline").checked;
+            Text.style.textDecoration = (check_val ? "underline" : "none");
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+
+    <select id="fontFamily" onchange="Font_Family(this.value)" >
+        <option value="Arial" selected>Arial</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Serif">Serif</option>
+
+    </select>
+
+    <select id="FontSize" onchange="Font_Size(this.value)" >
+        <option value="4pt">4pt</option>
+        <option value="6pt">6pt</option>
+        <option value="8pt">8pt</option>
+        <option value="10pt">10pt</option>
+        <option value="12pt" selected>12pt</option>
+        <option value="14pt">14pt</option>
+        <option value="16pt">16pt</option>
+    </select>
+
+    <label>  Italic<input type="checkbox" id="Italic" onchange="Font_Italic();"></label>
+    <label> Bold<input type="checkbox" id="Bold" onchange="Font_Bold();"></label>
+    <label> Underline<input type="checkbox" id="Underline" onchange="Font_Underline();"></label>
+</form>
+
+<div id="Content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea quas placeat laudantium, rem ad suscipit nulla quos, quaerat porro debitis sunt odio perferendis qui ullam ipsam nobis, vero alias.</div>
+
+
+</body>
+</html>

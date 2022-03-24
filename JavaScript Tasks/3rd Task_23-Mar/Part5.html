@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #5</title>
+
+    <style>
+        #warning_1 , #warning_2
+        {color: red; font-size: 14px; font-weight: bold; display: none;}
+        
+        #submit{display: none;}
+    </style>
+
+
+    
+<script>
+        
+    var first_pass = document.getElementById(Pass).value;
+    var ssecond_pass = document.getElementById(confirm_pass).value;
+    
+
+    function CheckPass()
+    {
+        // Case1: Passwords must be at least 6 characters long.
+        if (first_pass.length < 6)
+            {document.getElementById(warning_1).innerHTML="Passwords must be at least 6 characters long." ;} 
+        else
+            {document.getElementById(warning_1).innerHTML="" ;} 
+
+
+        // Case2: The two passwords must match.
+        if(Pass === confirm_pass)
+            {
+                document.getElementById(warning_2).style.display="";
+                document.getElementById(submit).style.display="block";
+            }
+
+        else
+            {
+                document.getElementById(warning_2).style.display="The two passwords must match.";
+                document.getElementById(submit).style.display="none";
+            } 
+            
+    
+            
+
+        
+    }
+</script>
+
+
+    
+</head>
+<body>
+
+    <form >
+        <label for="Pass">Password (min 6 characters):</label>
+        <input type="password" id="Pass" name="Pass" onkeyup="CheckPass()">
+        <span id="warning_1"></span>
+        <br><br>
+
+        <label for="confirm_pass">Repeat Password:</label>
+        <input type="password" id="confirm_pass" name="confirm_pass" placeholder="Password" onkeyup="CheckPass()">
+        <span id="warning_2"></span>
+        <br><br>
+
+        <input type="submit" value="Submit" id="submit" >
+    </form>
+
+
+    
+</body>
+</html>
